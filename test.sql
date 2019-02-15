@@ -1,0 +1,1 @@
+select * from ydd where 1=2;
