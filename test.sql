@@ -3,3 +3,7 @@ select * from ydd where 2=3;
 select * from ydd where 3=4;
 select * from ydd where 4=5;
 select * from ydd where 5=7;
+select * from ydd where 6=7;
+select * from ydd where 7=8;
+select * from ydd where 8=9;
+end
