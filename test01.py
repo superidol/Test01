@@ -15,11 +15,14 @@ print(len(d4))
 print(d4[4])
 for aa in d4: #遍厉元组中的元素
     print (aa)
+    print( ())
 for i in range(len(d4)):   
     print('%s---d4[%s]=%s' % (type(d4[i]),i,d4[i]))
 
    # ds=type(d4[i])
    # print(ds)
+
+
 
 # 利用sympy 解数学方程
 x=sym.Symbol('x')
@@ -171,10 +174,4 @@ def quchong(infile, outfile):
 func = lambda z: dict([(x, y) for y, x in z.items()])     # 字典键值对位置互换
 result = func(func(tw))
 
-
-
-''' 
-
-'''
-333333333333333333333333333
-'''
+‘’‘
