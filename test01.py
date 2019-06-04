@@ -173,5 +173,4 @@ def quchong(infile, outfile):
 
 func = lambda z: dict([(x, y) for y, x in z.items()])     # 字典键值对位置互换
 result = func(func(tw))
-
-‘’‘
+'''
