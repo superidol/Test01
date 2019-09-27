@@ -37,6 +37,3 @@ re.sub 用于替换字符串的匹配项。如果没有匹配到规则，则原�
 '''
 print(re.sub(patter2,'asdflkjasdfkljklasdfjklasdj',source,count=0))
 print(patter1.sub('KBKK',source,count=0))
-
-
-
