@@ -1,100 +1,100 @@
 # -*- coding: utf-8 -*-
-# from sympy import * 
-import sympy as sym ## 引入Sympy 模块
-import os 
-d1="Hello Worlds"
+# from sympy import *
+import sympy as sym  # 引入Sympy 模块
+import os
+
+d1 = "Hello Worlds"
 print(d1)
-d2=1
-d3=4
-d4=(1,2,3,4,['a','b'],5,'678')
+d2 = 1
+d3 = 4
+d4 = (1, 2, 3, 4, ['a', 'b'], 5, '678')
 print(d4)
-d4[4][0]='cd'
-d4[4][1]='ef'
+d4[4][0] = 'cd'
+d4[4][1] = 'ef'
 print(d4[0])
 print(len(d4))
 print(d4[4])
-for aa in d4: #遍厉元组中的元素
-    print (aa)
-    print( ())
-for i in range(len(d4)):   
-    print('%s---d4[%s]=%s' % (type(d4[i]),i,d4[i]))
+for aa in d4:  # 遍厉元组中的元素
+    print(aa)
+    print(())
+for i in range(len(d4)):
+    print('%s---d4[%s]=%s' % (type(d4[i]), i, d4[i]))
 
-   # ds=type(d4[i])
-   # print(ds)
-
+# ds=type(d4[i])
+# print(ds)
 
 
 # 利用sympy 解数学方程
-x=sym.Symbol('x')
-y=sym.Symbol('y')
-print (sym.solve([y+x-1,3*x+2*y-5],[x,y]))
-diss=(sym.solve([y+x-1,3*x+2*y-5],[x,y]))
+x = sym.Symbol('x')
+y = sym.Symbol('y')
+print(sym.solve([y + x - 1, 3 * x + 2 * y - 5], [x, y]))
+diss = (sym.solve([y + x - 1, 3 * x + 2 * y - 5], [x, y]))
 # print (limit(1/x**2, x, 0))
-print (diss)
-print(type (diss))
-print(diss[x],diss[y])  #结果在Dict中
+print(diss)
+print(type(diss))
+print(diss[x], diss[y])  # 结果在Dict中
 
 # 利用字符串 建立对应关系 替换另一个字符
-str1='abcd' # 原始字母
-taDB='人民公社' # 对应翻译码
+str1 = 'abcd'  # 原始字母
+taDB = '人民公社'  # 对应翻译码
 # trantab=str.maketrans(str1,taDB)
-st='abbdaaacd'
-print(st.translate(str.maketrans(str1,taDB)))
+st = 'abbdaaacd'
+print(st.translate(str.maketrans(str1, taDB)))
 
 # 字典的用法
-student={'小萌':'1001','小智':'1002','小强':'1003'}
+student = {'小萌': '1001', '小智': '1002', '小强': '1003'}
 print('小强的学号是：%(小强)s' % student)
 
-x={}
-y=x
-x['val']=12 #
+x = {}
+y = x
+x['val'] = 12  #
 print(x, y)
 
-st=student.copy()
+st = student.copy()
 
 print(st)
-st['小强']='4445'
+st['小强'] = '4445'
 print(student)
 print(st)
 # 列表中的字典
-dirdd=[{'id':1001,'imm':'sttr'},{'idd':'p01','dis':123}]
-print (len(dirdd))
-print (dirdd[0],dirdd[1])
+dirdd = [{'id': 1001, 'imm': 'sttr'}, {'idd': 'p01', 'dis': 123}]
+print(len(dirdd))
+print(dirdd[0], dirdd[1])
 print(dirdd[0]['id'])
 
-dirdd.append({'dsd':90909})
+dirdd.append({'dsd': 90909})
 print(dirdd)
 
-d2=[1,2,3,4,5]
+d2 = [1, 2, 3, 4, 5]
 print(d2)
-d2[2:]=list('7')
+d2[2:] = list('7')
 print(d2.count(1))
 
-a1=[1,2,3,4]
-b1=['a','b','c','d']
-c1=a1.copy()
-a1[len(a1):]=b1
-print (a1)
-c1.extend(b1) ## c1.extend(b1) 和 a1[len(a1):]=b1的结果是一样的，都是用于在列表末尾一次性追加另一个序列中的多个值
+a1 = [1, 2, 3, 4]
+b1 = ['a', 'b', 'c', 'd']
+c1 = a1.copy()
+a1[len(a1):] = b1
+print(a1)
+c1.extend(b1)  # c1.extend(b1) 和 a1[len(a1):]=b1的结果是一样的，都是用于在列表末尾一次性追加另一个序列中的多个值
 
-print(a1.index('a'))
+print(a1.index("a"))
 print(a1.index(1))
 
-xxx=111
+xxx = 111
 if xxx in a1:
-   print('X属于A1')
+    print('X属于A1')
 else:
-   print('X不属于A1')
+    print('X不属于A1')
 
 for iii in a1:
-   print(iii)
+    print(iii)
 
 print(len(a1))
-isis=0
+isis = 0
 # 使用while 循环 读取List的值
-while (isis<len(a1)):
-   print('a[%s]=%s'%(isis,a1[isis]))
-   isis=isis+1
+while isis < len(a1):
+    print('a[%s]=%s' % (isis, a1[isis]))
+    isis = isis + 1
 
 '''
 多行注释
@@ -102,23 +102,20 @@ while (isis<len(a1)):
 多行注释
 '''
 
-
-dic1={'a':(1,88),'b':2,'c':3,'d':4} #字典 同一Key 赋值多个。
+dic1 = {'a': (1, 88), 'b': 2, 'c': 3, 'd': 4}  # 字典 同一Key 赋值多个。
 print(dic1['a'][0])
 print(dic1['a'][1])
 
-
-dic2={('a','b'):100}
-print(dic2['a','b'])
-
+dic2 = {('a', 'b'): 100}
+print(dic2['a', 'b'])
 
 # 字典中去重复
-d={'d':0,'b':0,'c':1,'a':0,'e':1,'f':0,'h':2}
+d = {'d': 0, 'b': 0, 'c': 1, 'a': 0, 'e': 1, 'f': 0, 'h': 2}
 func = lambda z: dict([(x, y) for y, x in z.items()])
 print(d)
 print(func(d))
 print(func(func(d)))
-d2=(func(func(d)))
+d2 = (func(func(d)))
 print(d2)
 
 '''  Python中list、dict去重 
